@@ -25,6 +25,10 @@ body {
   min-height: 100vh;
 }
 
+.center-screen {
+  min-height: 0;
+}
+
 a {
   color: inherit;
 }
@@ -84,31 +88,80 @@ main {
   padding: 3rem 0 4rem;
 }
 
-.hero h1 {
-  font-size: 2.4rem;
-  margin: 0 0 0.5rem;
-  letter-spacing: -0.5px;
+/* Centered home layout */
+.center-screen {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  text-align: center;
 }
 
-.hero p.tagline {
-  color: var(--text-dim);
-  font-size: 1.05rem;
-  margin: 0 0 1.75rem;
-}
-
-.contact-list {
+.hero-centered {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
-  margin-bottom: 0.5rem;
+  align-items: center;
+  max-width: 480px;
 }
 
-.contact-list a {
+.hero-centered h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem;
+}
+
+.hero-centered .tagline {
+  color: var(--text-dim);
+  font-size: 1.05rem;
+  margin: 0 0 1.25rem;
+}
+
+.contact-line {
+  margin: 0 0 1.5rem;
+  font-size: 0.98rem;
+}
+
+.contact-line a {
   text-decoration: none;
   border-bottom: 1px solid var(--line);
 }
 
-.contact-list a:hover {
+.contact-line a:hover {
+  border-bottom-color: var(--accent);
+}
+
+.contact-line .sep {
+  color: var(--text-dim);
+  margin: 0 0.6rem;
+}
+
+.hero-centered .divider {
+  width: 60px;
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 0 0 1.5rem;
+}
+
+.center-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.center-nav a {
+  text-decoration: none;
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.center-nav a:hover, .center-nav a.active {
+  color: var(--text);
   border-bottom-color: var(--accent);
 }
 
